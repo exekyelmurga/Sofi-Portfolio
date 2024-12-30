@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+{
+    date: "November 2024 - Actualidad",
+    title: "Comunity manganger y content creator",
+    company: "Miriam Alfaro Peluquería",
+    description:
+      "Manejo de redes sociales y cracion de contenido. Logre incrementar la cantidad de interacciones en publicaciones, aumento de seguidores y clientela en un 20% en pocas semanas.",
+  },
+  {
+    date: "Julio 2024",
+    title: "Comunicadora digital?",
+    company: "Mas Fe - La Iglesia de Jescristo de los Santos de los Ultimos Dias",
+    description:
+      "Reportage, fotografia y planificacion de post en la dedicacion de un Templo que es de gran importacia religiosa en el noroeste argentio alcanzando cientos de miles de visaulizaciones.",
+  },
+
+]
+---
+
+<ol class="relative mt-16">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }
+</ol>
