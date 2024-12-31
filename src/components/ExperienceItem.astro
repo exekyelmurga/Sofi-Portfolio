@@ -30,7 +30,7 @@ const { title, company, description, link, date} = Astro.props
         {
             link && (
                 <LinkInline href={link}>
-                    Know more{' '}
+                    Saber mas{' '}
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="w-5 icon icon-tabler icon-tabler-chevron-right"
@@ -43,10 +43,10 @@ const { title, company, description, link, date} = Astro.props
                         stroke-linecap="round"
                         stroke-linejoin="round"
                     >
-                        <fragment>
+                        <>
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M9 6l6 6l-6 6" />
-                        </fragment>
+                        </>
                     </svg>
                 </LinkInline>
             )
