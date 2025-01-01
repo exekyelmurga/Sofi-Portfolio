@@ -31,14 +31,15 @@ const PROJECTS = [
     image: "/projects/marketing.webp",
     tags: [TAGS.ANSANA, TAGS.CANVA, TAGS.METAADS],
     link: 'https://www.canva.com/design/DAGIgdONx8o/smqTmtadS6sV7kEPx0fuAA/edit',
-    github: ''
+    otherlinks: 'https://www.canva.com/design/DAGJXahmLwM/HGzA3EljFupWXWVvMcNj8g/edit',
+    github: '',
   },
 ]
 ---
 
 <div class="flex flex-col gap-y-16" >
     {
-        PROJECTS.map(({ image, title, description, tags, link, github, }) => (
+        PROJECTS.map(({ image, title, description, tags, link, github, otherlinks }) => (
             <article class="flex flex-col space-x-0 space-y-8 md:flex-row md:space-x-8 md:space-y-0">
                 <div class="w-full md:w-1/2">
                     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -73,7 +74,13 @@ const PROJECTS = [
                             {link && (
                                 <LinkButton href={link}>
                                 <Link class="size-4" />
-                                Preview
+                                Ver Proyecto
+                                </LinkButton>
+                            )}
+                            {otherlinks && (
+                                <LinkButton href={otherlinks}>
+                                <Link class="size-4" />
+                                Resumen Ejecutivo
                                 </LinkButton>
                             )}
                         </footer>
