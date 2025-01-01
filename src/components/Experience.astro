@@ -1,33 +1,45 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import ExperienceItem from "./ExperienceItem.astro";
 const EXPERIENCE = [
-{
-    date: "November 2024 - Actualidad",
-    title: "Estrategia en Redes Sociales",
-    company: "Miriam Alfaro Peluquería",
-    description:
-    "+20% de seguidores e interacciones. Diseñé y ejecuté estrategias creativas de contenido que transformaron la presencia digital de la marca. En pocas semanas, logramos un aumento del 20% en seguidores, interacciones y clientela, destacando publicaciones que conectaron con la audiencia y potenciaron el crecimiento orgánico.",
-    link: "https://www.instagram.com/miriamalfaropeluqueria/"
-},
-  {
-    date: "Mayo 2024",
-    title: "Cobertura periodistica",
-    company: "Mas Fe - La Iglesia de Jescristo de los Santos de los Ultimos Dias",
-    description:
-    "Lideré la cobertura digital del evento de puertas abiertas del Templo de Salta. Dirigí la planificación y ejecución de guiones, cámaras, planos y sonido para este evento histórico, difundido a través de las redes sociales globales de la iglesia. En solo una semana, creamos videos, reels, fotos y flyers que cautivaron a miles de personas, impulsando visitas tanto a las páginas oficiales como a los centros de reuniones locales. A pesar de desafíos como coordinar con autoridades internacionales, logramos una producción impecable gracias a un equipo comprometido y una planificación estratégica. El impacto fue reconocido con una mención especial de las autoridades de la iglesia, consolidando este proyecto como un éxito en la comunicación digital."      ,
-    link: "https://drive.google.com/drive/folders/1ezV-AU3my16pQ-voLAuGqbLxR9x3Acj9"
-},
-  
+    {
+        date: "November 2024 - Actualidad",
+        title: "Estrategia en Redes Sociales",
+        company: "Miriam Alfaro Peluquería",
+        description:
+            "+20% de seguidores e interacciones. Diseñé y ejecuté estrategias creativas de contenido que transformaron la presencia digital de la marca. En pocas semanas, logramos un aumento del 20% en seguidores, interacciones y clientela, destacando publicaciones que conectaron con la audiencia y potenciaron el crecimiento orgánico.",
+        link: "https://www.instagram.com/miriamalfaropeluqueria/",
+    },
 
-]
+    {
+        date: "Mayo 2024",
+        title: "Cobertura periodistica",
+        company:
+            "Mas Fe - La Iglesia de Jescristo de los Santos de los Ultimos Dias",
+        description:
+            "Lideré la cobertura digital del evento de puertas abiertas del Templo de Salta. Dirigí la planificación y ejecución de guiones, cámaras, planos y sonido para este evento histórico, difundido a través de las redes sociales globales de la iglesia. En solo una semana, creamos videos, reels, fotos y flyers que cautivaron a miles de personas, impulsando visitas tanto a las páginas oficiales como a los centros de reuniones locales. A pesar de desafíos como coordinar con autoridades internacionales, logramos una producción impecable gracias a un equipo comprometido y una planificación estratégica. El impacto fue reconocido con una mención especial de las autoridades de la iglesia, consolidando este proyecto como un éxito en la comunicación digital.",
+        link: `https://drive.google.com/drive/folders/1ezV-AU3my16pQ-voLAuGqbLxR9x3Acj9`,
+    },
+
+    {
+        date: "Octubre - Diciembre 2023",
+        title: "Asistencia de Dirección",
+        company: "Wayruro Comunicacion",
+        description:
+            "Lideré la producción de un documental que visibilizó la rica cultura del Día de los Muertos en Jujuy. Supervisé guionistas, sonidistas y planistas, y además interpreté a la joven nieta en una escena clave. A pesar de desafíos como restricciones para filmar en el cementerio, el equipo logró capturar la esencia de los rituales a través de planos generales, medios y close-ups que destacaron los pequeños detalles y emociones de la celebración. El resultado recibió elogios y fue publicado en la página de Facebook de Wayruro Comunicación.",
+        link: "https://drive.google.com/drive/folders/1qxXXmWHzLOKC-2MTVZ72OxKEYG1Rz5wb",
+    },
+];
 ---
 
 <ol class="relative mt-16">
     {
-        EXPERIENCE.map((experience) => (
-            <li class="">
-                <ExperienceItem {...experience}/>
-            </li>
-        ))
+        EXPERIENCE.map((experience) => {
+            // const id = experience.title.replace(/\s+/g, '-').toLowerCase();
+            return (
+                <li class="">
+                    <ExperienceItem {...experience} />
+                </li>
+            );
+        })
     }
 </ol>
